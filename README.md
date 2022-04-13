@@ -1,34 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJs-Prisma Application
+
+A simple application on how to integrate `Prisma` in a `NextJs` application.
+
+## Languages
+
+* HTML5 
+* CSS3
+* NextJs
+* React
+* Typescript
+* Prisma
+* Sqlite
 
 ## Getting Started
 
-First, run the development server:
+1. Run `npm install` to install the required dependencies.
 
-```bash
-npm run dev
-# or
-yarn dev
+2. I have used a custom port, so run your server with `npm run dev -- -p 3200`.
+You can change to a port number of your choice by changing `"dev:" "next dev -p [your_port_number]"` the in the `package.json` file.
+
+3. Open [http://localhost:3200](http://localhost:3200) with your browser to see the result.
+
+4. You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+
+# Prisma Setup
+
+1. Run `npx prisma init` to create your prisma schema in the prisma directory.
+
+2. Set the `DATABASE_URL` in the `.env` file to point to your existing database. If your database has no tables yet, read [Getting started](https://pris.ly/d/getting-started).
+
+3. Set the `provider` of the `datasource` block in `schema.prisma` to match your database: `postgresql`, `mysql`, `sqlite`, `sqlserver` or `mongodb`.
+
+4. Run `prisma db pull` to turn your database schema into a Prisma schema.
+
+5. Run `prisma generate` to generate the Prisma Client. You can then start querying your database.
+
+
+# Initial Setup Commands
+
+Just in case you are curious about the original commands I ran for this setup...
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    npx create-next-app@latest --ts`
+    npm install -D tailwindcss postcss autoprefixer
+    npx tailwindcss init -p
+    npm i -D prisma  
+    npm i @prisma/client
+    npx prisma init
+```
