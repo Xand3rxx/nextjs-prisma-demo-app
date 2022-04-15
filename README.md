@@ -1,11 +1,11 @@
 # NextJs-Prisma Application
 
-A simple application on how to integrate `Prisma` in a `NextJs` application.
+A simple contact application on how to integrate `Prisma" into a `NextJs` application.
 
 ## Languages
 
 * HTML5 
-* CSS3
+* Tailwind CSS
 * NextJs
 * React
 * Typescript
@@ -49,3 +49,9 @@ Just in case you are curious about the original commands I ran for this setup...
     npm i @prisma/client
     npx prisma init
 ```
+
+# Useful Prisma Commands
+
+1. `npx prisma migrate dev` to run migrations.
+
+2. `npx prisma studio` to open Prisma Studio in the browser.
