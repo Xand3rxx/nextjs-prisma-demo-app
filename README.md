@@ -55,3 +55,7 @@ Just in case you are curious about the original commands I ran for this setup...
 1. `npx prisma migrate dev` to run migrations.
 
 2. `npx prisma studio` to open Prisma Studio in the browser.
+
+## Project Screenshots
+
+![Index Page](/public/img/landing.jpg)
